@@ -8,7 +8,7 @@ LDLIBS  = $(shell pkg-config --libs sdl) -lm -lOpenCL
 all: metaball
 
 clean:
-	$(RM) metaball *.o
+	$(RM) metaball *.o metaball.cl
 
 metaball.cl: metaball_common.h metaball.base.cl
 	cat metaball_common.h metaball.base.cl >$@
